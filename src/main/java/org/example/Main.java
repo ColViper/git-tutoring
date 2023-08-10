@@ -8,6 +8,6 @@ public class Main {
         int x = 1;
         System.out.println("no");
 
-
+        System.out.println("other branch");
     }
 }
