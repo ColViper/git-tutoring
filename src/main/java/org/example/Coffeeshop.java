@@ -17,7 +17,7 @@ public class Coffeeshop {
     public void doShit() {
         System.out.println("Hi! I am a coffee shop " + name);
         System.out.println();
-        System.out.println("Here's what's inside the fridge: " + fridge.toString());
+        System.out.println("Here's what's inside the fridge: " + fridge);
         System.out.println("Here are my employees:");
 
         for (int i = 0; i < employees.length; i++) {

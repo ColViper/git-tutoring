@@ -10,12 +10,6 @@ public class Fridge {
         this.storedItems = storedItems;
     }
 
-    public void printStoredItems() {
-        for (int i = 0; i < storedItems.length; i++) {
-            System.out.println(storedItems[i]);
-        }
-    }
-
     @Override
     public String toString() {
         return "Fridge{" +
