@@ -1,6 +1,8 @@
 package org.example.lesson1;
 
-public class school {
+public class School {
+
+    private String name;
     Classroom[] classrooms;
     Pupil[] pupils;
     Teacher[] teachers ;
@@ -11,7 +13,7 @@ public class school {
     Club[] clubs;
     Toilet[] toilets;
 
-    public school(Classroom[] classrooms, Pupil[] pupils, Teacher[] teachers, HeadTeacher[] headTeachers, Porter[] porters, CleaningWoman[] cleaningWomen, HeadMaster[] headMasters, Club[] clubs, Toilet[] toilets) {
+    public School(Classroom[] classrooms, Pupil[] pupils, Teacher[] teachers, HeadTeacher[] headTeachers, Porter[] porters, CleaningWoman[] cleaningWomen, HeadMaster[] headMasters, Club[] clubs, Toilet[] toilets) {
         this.classrooms = classrooms;
         this.pupils = pupils;
         this.teachers = teachers;
@@ -23,9 +25,13 @@ public class school {
         this.toilets = toilets;
     }
     public void doShit() {
-        for (int i = 0; i <= 2; i++) {
-            System.out.println();
+        System.out.println("Hi! I am a school " + name);
+        System.out.println();
+        System.out.println("Here are my classrooms:");
+        for (int i = 0; i < classrooms.length; i++) {
+            Classroom classroom = classrooms[i];
             System.out.println("===============================");
+            System.out.println("[" + i + "] classroom is called: " + classroom.classroom + " " + classroom.form);
         }
     }
 }
