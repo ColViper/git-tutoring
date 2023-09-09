@@ -10,8 +10,9 @@ import java.util.Arrays;
 public class MichaelArrayList implements MyList {
 
     int[] ints;
+    int a =1;
     public MichaelArrayList(){
-        this.ints = new int[1];
+        this.ints = new int[a];
     }
 
     @Override
@@ -21,20 +22,28 @@ public class MichaelArrayList implements MyList {
 
     @Override
     public void add(int s) {
-        int size=ints.length;
-        int[] ints1 = new int[size+1];
-        for (int i = 0; i <= size; i++) {
+
+        int[] ints1 = new int[a+1];
+
+        if(ints[0] == 0){
+            ints[0]=s;
+
+        }
+        else{System.arraycopy(ints, 0, ints1, 0, ints.length);
+        ints1[a]=s;}
+        a++;
+        /*for (int i = 0; i < size; i++) {
             if(ints[0] == 0){
                 ints[0]=s;
             }
-            /*if(i == size){
+            if(i == size){
                 ints1[i+1] =s;
             }
-            else{*/
+            else{
                 ints1[i]=ints[i];
-            //}
-        }
-
+            }
+        }*/
+        /*a=a+1;*/
 
     }
 
