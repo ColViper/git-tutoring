@@ -30,7 +30,7 @@ public class MichaelArrayList implements MyList {
 
         }
         else{System.arraycopy(ints, 0, ints1, 0, ints.length);
-        ints1[a]=s;}
+            ints1[a]=s;}
         a++;
         /*for (int i = 0; i < size; i++) {
             if(ints[0] == 0){
