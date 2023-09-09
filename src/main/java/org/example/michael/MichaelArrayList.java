@@ -21,6 +21,11 @@ public class MichaelArrayList implements MyList {
     }
 
     @Override
+    public int get(int index) {
+        return ints[index];
+    }
+
+    @Override
     public void add(int valueToAdd) {
         if (ints == null) {
             ints = new int[]{valueToAdd};
@@ -39,6 +44,7 @@ public class MichaelArrayList implements MyList {
         michaelArrayList.add(2);
         michaelArrayList.add(3);
         System.out.println(michaelArrayList);
+        System.out.println(michaelArrayList.get(1));
 
     }
 
