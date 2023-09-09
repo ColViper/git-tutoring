@@ -10,9 +10,9 @@ import java.util.Arrays;
 public class MichaelArrayList implements MyList {
 
     int[] ints;
-    int a =1;
-    public MichaelArrayList(){
-        this.ints = new int[a];
+
+    public MichaelArrayList() {
+        this.ints = null;
     }
 
     @Override
@@ -21,35 +21,19 @@ public class MichaelArrayList implements MyList {
     }
 
     @Override
-    public void add(int s) {
-
-        int[] ints1 = new int[a+1];
-
-        if(ints[0] == 0){
-            ints[0]=s;
-
+    public void add(int valueToAdd) {
+        if (ints == null) {
+            ints = new int[]{valueToAdd};
+            return;
         }
-        else{System.arraycopy(ints, 0, ints1, 0, ints.length);
-            ints1[a]=s;}
-        a++;
-        /*for (int i = 0; i < size; i++) {
-            if(ints[0] == 0){
-                ints[0]=s;
-            }
-            if(i == size){
-                ints1[i+1] =s;
-            }
-            else{
-                ints1[i]=ints[i];
-            }
-        }*/
-        /*a=a+1;*/
 
+        int[] intsCopy = new int[ints.length + 1];
+        System.arraycopy(ints, 0, intsCopy, 0, ints.length);
+        intsCopy[ints.length] = valueToAdd;
+        ints = intsCopy;
     }
 
-
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         MichaelArrayList michaelArrayList = new MichaelArrayList();
         michaelArrayList.add(1);
         michaelArrayList.add(2);
