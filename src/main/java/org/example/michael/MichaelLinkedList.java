@@ -51,7 +51,7 @@ public class MichaelLinkedList implements MyList {
 
     @Override
     public int get(int index) {
-        if (index > this.size() || index < 0) {
+        if (index >= this.size() || index < 0) {
             throw new IndexOutOfBoundsException("index is missing");
         }
 
