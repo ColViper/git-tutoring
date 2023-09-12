@@ -57,7 +57,7 @@ public class MichaelLinkedList implements MyList {
 
         Node cursor = rootNode;
         int i = 0;
-
+        //this
         do {
             if (i == index) {
                 return cursor.getContent();
