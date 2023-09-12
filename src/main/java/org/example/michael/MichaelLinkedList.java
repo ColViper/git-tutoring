@@ -66,7 +66,7 @@ public class MichaelLinkedList implements MyList {
             i++;
         }
         while(true);
-        //cursor.getNextElement() != null
+        //cursor.getNextElement() != nul
         /*for (int i = 0; i <= index; i++) {
             if (i == index) {
                 return cursor.getContent();
