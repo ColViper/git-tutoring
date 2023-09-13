@@ -20,7 +20,6 @@ public class MichaelLinkedList implements MyList {
 
     @Override
     public void add(int content) {
-
         if (rootNode == null) {
             rootNode = new Node(null, content);
             return;
@@ -32,10 +31,7 @@ public class MichaelLinkedList implements MyList {
         }
 
         Node nextNode = new Node(null, content);
-
-
         cursor.setNextElement(nextNode);
-
     }
 
     public int size() {
@@ -56,41 +52,34 @@ public class MichaelLinkedList implements MyList {
         }
 
         Node cursor = rootNode;
-        int i = 0;
-        //this
-        do {
-            if (i == index) {
-                return cursor.getContent();
-            }
+        int cursorIndex = 0;
+        while (index != cursorIndex) {
             cursor = cursor.getNextElement();
-            i++;
+            cursorIndex++;
         }
-        while(true);
-        //cursor.getNextElement() != nul
-        /*for (int i = 0; i <= index; i++) {
-            if (i == index) {
-                return cursor.getContent();
-            }
-            cursor = cursor.getNextElement();
-        }*/
 
-
+        return cursor.getContent();
     }
 
     public static void main(String[] args) {
-        MichaelLinkedList michaelLinkedList = new MichaelLinkedList();
+        MyList michaelLinkedList = new MichaelLinkedList();
         michaelLinkedList.add(1);
         michaelLinkedList.add(2);
         michaelLinkedList.add(3);
         michaelLinkedList.add(4);
         michaelLinkedList.add(5);
-        System.out.println(michaelLinkedList);
-        System.out.println("size = " + michaelLinkedList.size());
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("enter your text");
-        int next = scanner.nextInt();
-        System.out.println(next);
-        System.out.println(michaelLinkedList.get(next));
+
+        for (int i = 0; i < michaelLinkedList.size(); i++) {
+            System.out.println(michaelLinkedList.get(i));
+        }
+
+//        System.out.println(michaelLinkedList);
+//        System.out.println("size = " + michaelLinkedList.size());
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("enter your text");
+//        int next = scanner.nextInt();
+//        System.out.println(next);
+//        System.out.println(michaelLinkedList.get(next));
 
     }
 
